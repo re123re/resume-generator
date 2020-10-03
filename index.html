@@ -37,6 +37,14 @@
 			<div class="col-md-8 order-md-1">
 				<h3 class="mb-3">1. Основная информация</h3>
 				<form class="needs-validation" novalidate>
+					<div class="mb-4">
+						<img src="https://obrazec-rezyume.ru/wp-content/uploads/2020/10/avatar.jpg" class="mb-4" alt="avatar"
+							class="img-fluid" width="200">
+					</div>
+					<div class="mb-3">
+						<label for="photo">Личная фотография</label>
+						<input type="file" class="form-control-file" id="photo">
+					</div>
 					<div class="row">
 						<div class="col-md-6 mb-3">
 							<label for="firstName">Имя</label>
@@ -96,9 +104,15 @@
 						<label for="post">Должность</label>
 						<input type="text" class="form-control" id="post" placeholder="Менеджер по работе с клиентами">
 					</div>
-					<div class="mb-3">
-						<label for="photo">Личная фотография</label>
-						<input type="file" class="form-control-file" id="photo">
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="assignment">Готовность к командировкам</label>
+							<select class="custom-select d-block w-100" id="assignment" required>
+								<option value="">Выбор...</option>
+								<option>Готов</option>
+								<option>Не готов</option>
+							</select>
+						</div>
 					</div>
 
 					<br>
@@ -189,11 +203,148 @@
 									</div>
 								</div>
 							</div>
-							<button type="button" class="btn btn-secondary" id="addEducation">Добавить учебное заведение</button>
+							<button type="button" class="btn btn-secondary" id="addEducation">Добавить учебное
+								заведение</button>
 						</div>
 					</div>
 
 					<br>
+
+					<h3 class="mb-3">4. Опыт работы</h3>
+					<div class="mb-3">
+						<label for="gender">Период работы</label>
+						<div class="input-group input-daterange">
+							<input type="date" class="form-control" value="">
+							<div class="input-group-addon">&nbsp;по&nbsp;</div>
+							<input type="date" class="form-control" value="">
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="post">Должность</label>
+						<input type="text" class="form-control" id="post" placeholder="Менеджер по работе с клиентами">
+					</div>
+					<div class="form-group">
+						<label for="obligation">Должностные обязанности и достижения</label>
+						<textarea class="form-control" id="obligation" rows="3"></textarea>
+					</div>
+
+					<br>
+					<h3 class="mb-3">5. Курсы и тренинги</h3>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="training">Название курса</label>
+							<input type="text" class="form-control" id="training" placeholder="">
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="organization">Наименование организации</label>
+							<input type="text" class="form-control" id="organization" placeholder="">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="completion">Год окончания</label>
+							<select class="custom-select d-block w-100" id="completion" required>
+								<option value="">Выбор...</option>
+								<option>1950</option>
+								<option>1951</option>
+								<option>1952</option>
+								<option>1953</option>
+								<option>1954</option>
+								<option>1955</option>
+								<option>1956</option>
+								<option>1957</option>
+								<option>1958</option>
+								<option>1959</option>
+								<option>1960</option>
+								<option>1961</option>
+								<option>1962</option>
+								<option>1963</option>
+								<option>1964</option>
+								<option>1965</option>
+							</select>
+						</div>
+					</div>
+					<br>
+					<h3 class="mb-3">6. Дополнительная информация</h3>
+					<div class="row">
+						<div class="col-md-8">
+							<label for="languages">Знание иностранных языков</label>
+						</div>
+						<div class="col text-right">
+							<div class="container">
+								<a href="#" data-toggle="tooltip" title="A1 — начальный;
+										A2 — элементарный;
+										B1 — средний;
+										B2 — средне-продвинутый;
+										C1 — продвинутый;
+										C2 — в совершенстве.">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<input type="text" class="form-control" id="languages"
+							placeholder="Английский — C1 — Продвинутый">
+					</div>
+					<div class="mb-3">
+						<label for="skills">Водительские права (категории)</label><br>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox1" value="option1">
+							<label class="form-check-label" for="licenseCheckbox1">A</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox2" value="option2">
+							<label class="form-check-label" for="licenseCheckbox2">B</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox3" value="option3">
+							<label class="form-check-label" for="licenseCheckbox3">BE</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox4" value="option4">
+							<label class="form-check-label" for="licenseCheckbox4">C</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox5" value="option5">
+							<label class="form-check-label" for="licenseCheckbox5">CE</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox6" value="option6">
+							<label class="form-check-label" for="licenseCheckbox6">D</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox7" value="option7">
+							<label class="form-check-label" for="licenseCheckbox7">DE</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox8" value="option8">
+							<label class="form-check-label" for="licenseCheckbox8">M</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="licenseCheckbox9" value="option9">
+							<label class="form-check-label" for="licenseCheckbox9">TB и TM</label>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="skills">Ключевые навыки</label>
+						<textarea class="form-control" id="skills"
+							rows="3">MS Excel, MS Word, 1С: Бухгалтерия</textarea>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<label for="personalQualities">Личные качества</label>
+						</div>
+						<div class="col text-right">
+							<div class="container">
+								<a href="#" data-toggle="tooltip"
+									title="Ответственность, стрессоустойчивость, целеустремленность, быстрая обучаемость, пунктуальность,аккуратность, внимательность, умение работать в команде, инициативность, доброжелательность, креативность, общительность">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<textarea class="form-control" id="personalQualities"
+							rows="3">коммуникабельность, исполнительность, организованность, презентабельный внешний вид.</textarea>
+					</div>
 
 					<button class="btn btn-primary btn-lg btn-block" id="generate">Составить резюме</button>
 				</form>
