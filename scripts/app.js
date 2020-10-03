@@ -45,10 +45,29 @@ const toBase64 = file => new Promise((resolve, reject) => {
 
 function onAddEducation() {
     Runtime.educationGroupCount++;
-    const newEducationGroup = $('educationGroup').clone();
+    const educationGroup = $('#educationGroup');
+
+    const newEducationGroup = educationGroup.clone();
+    newEducationGroup.attr('id', 'educationGroup' + Runtime.educationGroupCount);
+
+    const institutio = newEducationGroup.find('#institutio');
+    institutio.attr('id', 'institutio' + Runtime.educationGroupCount);
+
+    const faculty = newEducationGroup.find('#faculty');
+    faculty.attr('id', 'faculty' + Runtime.educationGroupCount);
+
+    const specialty = newEducationGroup.find('#specialty');
+    specialty.attr('id', 'specialty' + Runtime.educationGroupCount);
+
+    const finishYear = newEducationGroup.find('#finishYear');
+    finishYear.attr('id', 'finishYear' + Runtime.educationGroupCount);
+
+    const educationType = newEducationGroup.find('#educationType');
+    educationType.attr('id', 'educationType' + Runtime.educationGroupCount);
     
-    const institutio = newEducationGroup.children('#institutio');
-    
+    const separator = '<hr class="my-4" id="sep' + Runtime.educationGroupCount + '">';
+    educationGroup.after(separator);
+    $('#sep' + Runtime.educationGroupCount).after(newEducationGroup);
 };
 
 class Runtime {
