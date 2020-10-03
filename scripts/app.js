@@ -1,11 +1,11 @@
 const { jsPDF } = window.jspdf;
 
-function generatePdf() {
+function onGeneratePdf() {
     const doc = new jsPDF();
     doc.setFont('Roboto-Light');
 
     doc.setFontSize(22);
-    doc.text("Петух", 10, 10);
+    doc.text("Резюме", 10, 10);
     doc.line(10,20, 200, 20);
     //doc.save("resume.pdf");
 
@@ -18,6 +18,9 @@ function generatePdf() {
     doc.text("Фамилия: " + lastName, 10, 40);
     doc.text("Отчество: " + patronymic, 10, 50);
 
+    
+
+
     const ph = document.getElementById("photo");
     toBase64(ph.files[0]).then(function (value) {
         if (value) {
@@ -27,7 +30,7 @@ function generatePdf() {
     }, function (reason) {
         console.log(reason); // Ошибка!
     });
-}
+};
 
 const toBase64 = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -39,3 +42,15 @@ const toBase64 = file => new Promise((resolve, reject) => {
         resolve(null);
     }
 });
+
+function onAddEducation() {
+    Runtime.educationGroupCount++;
+    const newEducationGroup = $('educationGroup').clone();
+    
+    const institutio = newEducationGroup.children('#institutio');
+    
+};
+
+class Runtime {
+    static educationGroupCount = 0;
+}
