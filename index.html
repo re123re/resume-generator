@@ -35,6 +35,8 @@
 
 		<div class="row">
 			<div class="col-md-8 order-md-1">
+				<div class="card">
+					<div class="card-body">
 				<h3 class="mb-3">1. Основная информация</h3>
 				<form class="needs-validation" novalidate>
 					<div class="mb-4">
@@ -114,9 +116,11 @@
 							</select>
 						</div>
 					</div>
-
+						</div>
+					</div>					
 					<br>
-
+					<div class="card">
+						<div class="card-body">
 					<h3 class="mb-3">2. Личная информация</h3>
 					<div class="row">
 						<div class="col-md-6 mb-3">
@@ -124,8 +128,8 @@
 							<input type="text" class="form-control" id="city" placeholder="Москва">
 						</div>
 						<div class="col-md-6 mb-3">
-							<label for="schedule">Переезд</label>
-							<select class="custom-select d-block w-100" id="schedule" required>
+							<label for="crossing">Переезд</label>
+							<select class="custom-select d-block w-100" id="crossing" required>
 								<option value="">Выбор..</option>
 								<option>Невозможен</option>
 								<option>Возможен</option>
@@ -150,12 +154,12 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6 mb-3">
-							<label for="citizenship">Дата рождения</label>
-							<input type="date" class="form-control" id="citizenship" placeholder="">
+							<label for="birthdate">Дата рождения</label>
+							<input type="date" class="form-control" id="birthdate" placeholder="">
 						</div>
 						<div class="col-md-4 mb-3">
-							<label for="gender">Семейное положение</label>
-							<select class="custom-select d-block w-100" id="gender" required>
+							<label for="maritalStatus">Семейное положение</label>
+							<select class="custom-select d-block w-100" id="maritalStatus" required>
 								<option value="">Выбор..</option>
 								<option>Не женат/Не замужем</option>
 								<option>Женат/Замужем</option>
@@ -166,6 +170,8 @@
 							<label class="form-check-label" for="flexCheckIndeterminate">
 								Есть дети
 							</label>
+						</div>
+					</div>
 						</div>
 					</div>
 
@@ -209,26 +215,34 @@
 					</div>
 
 					<br>
-
+					<div class="card">
+						<div class="card-body">
 					<h3 class="mb-3">4. Опыт работы</h3>
 					<div class="mb-3">
-						<label for="gender">Период работы</label>
+						<label for="workPeriod">Период работы</label>
 						<div class="input-group input-daterange">
-							<input type="date" class="form-control" value="">
+							<input type="date" class="form-control" id="workPeriod" value="">
 							<div class="input-group-addon">&nbsp;по&nbsp;</div>
-							<input type="date" class="form-control" value="">
+							<input type="date" class="form-control" id="workPeriod" value="">
 						</div>
 					</div>
 					<div class="mb-3">
-						<label for="post">Должность</label>
-						<input type="text" class="form-control" id="post" placeholder="Менеджер по работе с клиентами">
+						<label for="appointment">Должность</label>
+						<input type="text" class="form-control" id="appointment" placeholder="Менеджер по работе с клиентами">
+					</div>
+					<div class="mb-3">
+						<label for="organizationWork">Организация</label>
+						<input type="text" class="form-control" id="organizationWork" placeholder="ООО «Продмагинпорт», г. Москва">
 					</div>
 					<div class="form-group">
 						<label for="obligation">Должностные обязанности и достижения</label>
 						<textarea class="form-control" id="obligation" rows="3"></textarea>
 					</div>
-
+						</div>
+					</div>
 					<br>
+					<div class="card">
+						<div class="card-body">
 					<h3 class="mb-3">5. Курсы и тренинги</h3>
 					<div class="row">
 						<div class="col-md-6 mb-3">
@@ -236,35 +250,21 @@
 							<input type="text" class="form-control" id="training" placeholder="">
 						</div>
 						<div class="col-md-6 mb-3">
-							<label for="organization">Наименование организации</label>
-							<input type="text" class="form-control" id="organization" placeholder="">
+							<label for="organizationCoach">Наименование организации</label>
+							<input type="text" class="form-control" id="organizationCoach" placeholder="">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 mb-3">
 							<label for="completion">Год окончания</label>
-							<select class="custom-select d-block w-100" id="completion" required>
-								<option value="">Выбор...</option>
-								<option>1950</option>
-								<option>1951</option>
-								<option>1952</option>
-								<option>1953</option>
-								<option>1954</option>
-								<option>1955</option>
-								<option>1956</option>
-								<option>1957</option>
-								<option>1958</option>
-								<option>1959</option>
-								<option>1960</option>
-								<option>1961</option>
-								<option>1962</option>
-								<option>1963</option>
-								<option>1964</option>
-								<option>1965</option>
-							</select>
+							<input type="text" class="form-control" id="completion" placeholder="2020">
+						</div>
+					</div>
 						</div>
 					</div>
 					<br>
+					<div class="card">
+						<div class="card-body">
 					<h3 class="mb-3">6. Дополнительная информация</h3>
 					<div class="row">
 						<div class="col-md-8">
@@ -273,11 +273,11 @@
 						<div class="col text-right">
 							<div class="container">
 								<a href="#" data-toggle="tooltip" title="A1 — начальный;
-										A2 — элементарный;
-										B1 — средний;
-										B2 — средне-продвинутый;
-										C1 — продвинутый;
-										C2 — в совершенстве.">Подробнее</a>
+A2 — элементарный;
+B1 — средний;
+B2 — средне-продвинутый;
+C1 — продвинутый;
+C2 — в совершенстве.">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -286,7 +286,7 @@
 							placeholder="Английский — C1 — Продвинутый">
 					</div>
 					<div class="mb-3">
-						<label for="skills">Водительские права (категории)</label><br>
+						<label for="drive">Водительские права (категории)</label><br>
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" id="licenseCheckbox1" value="option1">
 							<label class="form-check-label" for="licenseCheckbox1">A</label>
@@ -344,6 +344,8 @@
 					<div class="mb-3">
 						<textarea class="form-control" id="personalQualities"
 							rows="3">коммуникабельность, исполнительность, организованность, презентабельный внешний вид.</textarea>
+					</div>
+						</div>
 					</div>
 
 					<button class="btn btn-primary btn-lg btn-block" id="generate">Составить резюме</button>
